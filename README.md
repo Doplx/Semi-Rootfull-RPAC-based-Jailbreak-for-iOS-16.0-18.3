@@ -51,3 +51,49 @@ Main Components:
  
 	7.	Control Center Module / Daemon
 	•	Optionally develop a CCSupport module to toggle jailbreak services (e.g., tweak loader or daemon management) directly from Control Center.
+
+Project Structure Proposal
+RPACJailbreak/
+├── src/
+│   ├── main.m
+│   ├── exploit/
+│   │   └── rpac.m
+│   ├── kernel/
+│   │   ├── tfp0.m
+│   │   ├── amfi_patch.m
+│   │   └── trustcache_loader.m
+│   └── bootstrap/
+│       └── installer.m
+├── trustcache/
+│   └── trustcache.bin
+├── offsets/
+│   └── offsets.json
+├── Makefile
+└── control
+
+
+RPAC Exploit Requirements
+	•	Kernel read/write primitives via RPAC.
+	•	Identify kernel base, kernel slide, kernel task port.
+	•	Patch relevant task structures for tfp0.
+	•	Optionally patch macOS’ equivalent codesign enforcement if needed.
+
+
+Recommended Tools/Dependencies
+
+•	RPAC PoC as base for exploit
+	•	TrustCache generator (C tool)
+	•	CoreBinpack or Procursus bootstrap
+
+
+ Notes
+	•	Works semi-rootfully; tweaks loaded via /var/jb.
+	•	AMFI patching done in-kernel, no amfid replacement needed.
+	•	Re-jailbreak via app or trigger upon reboot.
+	•	No KTRR bypass required.
+
+
+
+ 
+
+ 
