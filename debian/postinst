@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "[*] DopamineRPACJB installed." >> /var/log/jb_install.log
+exit 0
