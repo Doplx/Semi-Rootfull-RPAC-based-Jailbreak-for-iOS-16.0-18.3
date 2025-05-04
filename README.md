@@ -14,7 +14,9 @@ A semi-rootfull jailbreak targeting iOS 16.0–18.3 devices affected by the RPAC
 ⸻
 
 Main Components:
-	1.	RPAC Exploit Integration
+	
+ 
+ 1.	RPAC Exploit Integration
 	•	Implement the RPAC exploit to achieve arbitrary kernel read/write primitives.
 	•	Use this to gain tfp0 by modifying task_struct privileges for the current process.
 	•	Recommended base: RPAC PoC
