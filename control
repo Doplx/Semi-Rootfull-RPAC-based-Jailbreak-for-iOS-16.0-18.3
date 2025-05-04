@@ -1,0 +1,8 @@
+Package: com.ahmedaf947.rpacjb
+Name: DopamineRPACJB
+Version: 1.0
+Architecture: iphoneos-arm64
+Description: Semi-Rootfull Jailbreak for iOS 18.3 using RPAC
+Maintainer: ahmedaf947
+Author: ahmedaf947
+Depends: firmware (>= 18.3)
