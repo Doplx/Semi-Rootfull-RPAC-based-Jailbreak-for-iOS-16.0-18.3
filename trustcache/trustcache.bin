@@ -1,0 +1,13 @@
+#import <Foundation/Foundation.h>
+#import "offsets.h"
+
+void loadTrustCache() {
+    const char *trustcachePath = "/private/preboot/jb/trustcache.bin";
+    NSData *trustCacheData = [NSData dataWithContentsOfFile:@(trustcachePath)];
+
+    if (trustCacheData) {
+        NSLog(@"[+] TrustCache loaded successfully!");
+    } else {
+        NSLog(@"[-] Failed to load TrustCache");
+    }
+}
